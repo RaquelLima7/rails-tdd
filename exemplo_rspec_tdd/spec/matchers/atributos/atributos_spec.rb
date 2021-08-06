@@ -10,11 +10,21 @@ describe 'Atributos' do
       puts ">>>>>>>>>> DEPOIS de TODOS os testes"
     end
 
+   # before(:each) do   #### substituiu pelo código da linha 23
+   #   puts "ANTES"
+   #   @pessoa = Pessoa.new
+   # end
+
+   # after(:each) do
+   #  @pessoa.nome = "Sem nome!"
+   #  puts "DEPOIS >>>>>>> #{@pessoa.inspect}"
+   # end
+
    around(:each) do |teste| # 1-antes de cada teste, instancia uma nova pessoa 
     puts "ANTES" 
     @pessoa = Pessoa.new   # 6-depois que imprimir o nome vai e instancia uma nova pessoa 
 
-    teste.run # roda o teste
+    teste.run # roda o teste  #no around precisa fazer o disparo do teste, diferente do before e after das linhas 13 e 18
 
     @pessoa.nome = "Sem nome!"  # 4-depois que fizer o teste, volta e coloca sem nome
                                 # 9 - depois muda para sem nome de novo

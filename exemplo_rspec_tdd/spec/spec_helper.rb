@@ -18,6 +18,7 @@ require_relative '../helpers/helper'
 
 RSpec.configure do |config|
 
+  #desta forma ativa o falhas agregadas para todos os testes
   config.define_derived_metadata do |meta|
     meta[:aggregate_failures] = true
   end

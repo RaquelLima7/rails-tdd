@@ -7,10 +7,8 @@ class Student
   end
 
   def foo(arg)
-    ######
   end
 
   def bar
-    ####
   end
 end

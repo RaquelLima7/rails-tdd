@@ -19,7 +19,7 @@ describe 'Stub' do
   it 'Argumentos Dinâmicos' do
     student = Student.new
 
-    allow(student).to receive(:foo) do |arg|
+    allow(student).to receive(:foo) do |arg|  #dinâmico, pode ser qualuer tipo de argumento
       if arg == :hello
         "olá"
       elsif arg == :hi
@@ -37,7 +37,7 @@ describe 'Stub' do
 
     allow_any_instance_of(Student).to receive(:bar).and_return(true)
 
-    expect(student.bar).to be_truthy
+    expect(student.bar).to be_truthy  #testando com as duas instancias acima
     expect(other_student.bar).to be_truthy
   end
 

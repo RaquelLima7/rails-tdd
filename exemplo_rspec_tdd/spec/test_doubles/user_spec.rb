@@ -10,11 +10,15 @@ describe 'Test Double' do
   end
 
   it 'as_null_object' do
-    user = double('User').as_null_object
-    allow(user).to receive(:name).and_return('Jack')
-    allow(user).to receive(:password).and_return('secret')
-    puts user.name
+    user = double('User').as_null_object # 1-declarou um dublê chamado user
+    allow(user).to receive(:name).and_return('Jack') # 2-permitiu ele receber o nome e retornar Jack
+    allow(user).to receive(:password).and_return('secret') # 3-permitiu ele receber o password e retornar secret
+    puts user.name # 4-chamou os dois
     puts user.password
-    user.abc
+    user.abc # 5- não permitou para o abc, nesses casos a gente pode ignorar esses erros que venham de
+            # determinados dublês, quando tiver utilizando em conjunto com os mocks
+            # quando quizer dispensar a mensagem, basta utilizar o as_null_object (como na linha 13)
+            # assim qualquer chamada no dublê que ao final levante uma mensagem de erro ele vai simplesmente
+            #transformar isso em um objeto de erro, um objeto nulo
   end
 end

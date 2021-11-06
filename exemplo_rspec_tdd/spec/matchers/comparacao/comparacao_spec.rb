@@ -24,13 +24,13 @@ describe 'Matchers de Comparação' do
   end
 
   #esse teste tem dois erros, mas quando rodamos ele para no primeiro e não mostra o próximo
-  # assim, deta forma, precisa utilizar o falha agregada
-  it 'be_between inclusive / falhas agregadas', :aggregate_failures do  # ouno lugar de :aggregate_failures que é um symbol, pode olocar aggregate_failures:true
+  # assim, desta forma, precisa utilizar o falha agregada
+  it 'be_between inclusive / falhas agregadas', :aggregate_failures do  # ouno lugar de :aggregate_failures que é um symbol, pode colocar aggregate_failures:true
       expect(5).to be_between(2,7).inclusive
       expect(1).to be_between(2,7).inclusive
       expect(8).to be_between(2,7).inclusive
   end
- #mas para fazer isso em tidos os testes precisa ativar nas configurações no spec_helper.rb
+ #mas para fazer isso em todos os testes precisa ativar nas configurações no spec_helper.rb
 
   it 'be_between exclusive' do
     expect(5).to be_between(2,7).exclusive

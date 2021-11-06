@@ -21,7 +21,7 @@ describe 'Stub' do
 
     allow(student).to receive(:foo) do |arg|  #dinâmico, pode ser qualuer tipo de argumento
       if arg == :hello
-        "olá"
+        "Olá!!!"
       elsif arg == :hi
         "Hi!!!"
       end

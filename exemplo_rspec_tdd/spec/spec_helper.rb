@@ -31,6 +31,7 @@ RSpec.configure do |config|
   #   puts ">>>>>>>>>> DEPOIS de TODA a suíte de testes"
   # end
 
+  #context e all são as mesmas coisas
   # config.before(:context) do
   #   puts ">>>>>>>>>> ANTES de TODOS os testes"
   # end

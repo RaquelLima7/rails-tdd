@@ -15,7 +15,7 @@ describe 'Test Double' do
     allow(user).to receive(:password).and_return('secret') # 3-permitiu ele receber o password e retornar secret
     puts user.name # 4-chamou os dois
     puts user.password
-    user.abc # 5- não permitou para o abc, nesses casos a gente pode ignorar esses erros que venham de
+    user.abc # 5- não permitiu para o abc, nesses casos a gente pode ignorar esses erros que venham de
             # determinados dublês, quando tiver utilizando em conjunto com os mocks
             # quando quizer dispensar a mensagem, basta utilizar o as_null_object (como na linha 13)
             # assim qualquer chamada no dublê que ao final levante uma mensagem de erro ele vai simplesmente

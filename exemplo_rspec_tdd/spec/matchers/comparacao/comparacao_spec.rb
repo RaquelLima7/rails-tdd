@@ -25,7 +25,7 @@ describe 'Matchers de Comparação' do
 
   #esse teste tem dois erros, mas quando rodamos ele para no primeiro e não mostra o próximo
   # assim, desta forma, precisa utilizar o falha agregada
-  it 'be_between inclusive / falhas agregadas', :aggregate_failures do  # ouno lugar de :aggregate_failures que é um symbol, pode colocar aggregate_failures:true
+  it 'be_between inclusive / falhas agregadas', :aggregate_failures do  # no lugar de :aggregate_failures que é um symbol, pode colocar aggregate_failures:true
       expect(5).to be_between(2,7).inclusive
       expect(1).to be_between(2,7).inclusive
       expect(8).to be_between(2,7).inclusive
